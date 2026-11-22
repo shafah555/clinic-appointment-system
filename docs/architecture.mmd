@@ -1,0 +1,36 @@
+classDiagram
+  class User
+  class Doctor {
+    id
+    name
+    specialization
+    fee
+  }
+  class Appointment {
+    id
+    patient_name
+    patient_email
+    appointment_date
+    appointment_time
+    status
+  }
+  class Bill {
+    id
+    appointment_id
+    amount
+    payment_status
+  }
+  class Notification {
+    id
+    recipient
+    message
+    status
+  }
+  class UserFactory
+  class AppointmentFacade
+  class AppointmentSubject
+  Appointment "many" --> "1" Doctor
+  Appointment "1" --> "0..1" Bill
+  AppointmentFacade ..> Appointment
+  UserFactory ..> User
+  AppointmentSubject ..> Notification

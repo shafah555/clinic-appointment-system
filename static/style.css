@@ -1,0 +1,10 @@
+:root{--navy:#123b50;--teal:#168b83;--pale:#eaf6f4;--ink:#183342}
+body{background:#f5f8fa;color:var(--ink);font-family:Inter,system-ui,-apple-system,"Segoe UI",sans-serif}
+.navbar{background:var(--navy)}.navbar-brand span{color:#7fe0d2}.nav-link{color:#e8f5f4!important}
+.hero{background:linear-gradient(120deg,#123b50,#168b83);color:white;box-shadow:0 12px 35px #123b5020}
+.eyebrow{font-size:.72rem;letter-spacing:.15em;font-weight:800;color:#75d8cc}
+.hero .eyebrow{color:#a9f0e5}.hero-icon{font-size:8rem;color:#c9fff4;opacity:.8}
+.btn-primary{background:var(--teal);border-color:var(--teal)}.btn-primary:hover{background:#106e68;border-color:#106e68}
+.stat-card,.doctor-card,.form-panel{background:white;border:1px solid #e5edef;border-radius:16px;padding:1.2rem;box-shadow:0 5px 20px #18334208}
+.stat{font-size:2rem;font-weight:800;color:var(--teal)}.muted{color:#71838b}.avatar{width:46px;height:46px;border-radius:14px;background:var(--pale);color:var(--teal);display:grid;place-items:center;font-weight:800;margin-bottom:1rem}
+.form-panel{max-width:650px;padding:2rem}.form-control,.form-select{padding:.7rem;border-color:#dce7e9}footer{color:#7c8c92;font-size:.85rem}

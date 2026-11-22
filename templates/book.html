@@ -1,0 +1,8 @@
+{% extends "base.html" %}{% block title %}Book appointment · CarePoint{% endblock %}{% block content %}
+<div class="form-panel mx-auto"><span class="eyebrow">NEW VISIT</span><h1 class="h2 mb-4">Book an appointment</h1>
+<form method="post"><div class="mb-3"><label class="form-label">Patient name</label><input class="form-control" name="patient_name" required></div>
+<div class="mb-3"><label class="form-label">Email</label><input class="form-control" type="email" name="patient_email" required></div>
+<div class="mb-3"><label class="form-label">Doctor</label><select class="form-select" name="doctor_id" required><option value="">Choose doctor</option>{% for d in doctors %}<option value="{{ d.id }}">{{ d.name }} · {{ d.specialization }} · ৳{{ d.fee }}</option>{% endfor %}</select></div>
+<div class="row"><div class="col mb-3"><label class="form-label">Date</label><input class="form-control" type="date" name="appointment_date" required></div><div class="col mb-3"><label class="form-label">Time</label><input class="form-control" type="time" name="appointment_time" required></div></div>
+<button class="btn btn-primary w-100">Submit appointment request</button></form></div>
+{% endblock %}

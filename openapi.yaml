@@ -1,0 +1,20 @@
+openapi: 3.0.3
+info:
+  title: CarePoint Clinic Demo API
+  version: 1.0.0
+  description: Academic demonstration API. Uses sample data only.
+servers:
+  - url: https://your-render-service.onrender.com
+paths:
+  /api/doctors:
+    get:
+      summary: List demo doctors
+      responses:
+        "200":
+          description: Doctor list
+  /api/appointments:
+    get:
+      summary: List demo appointments
+      responses:
+        "200":
+          description: Appointment list

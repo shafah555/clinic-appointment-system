@@ -1,0 +1,5 @@
+{% extends "base.html" %}{% block title %}Billing · CarePoint{% endblock %}{% block content %}
+<h1 class="h2 mb-3">Billing management</h1>
+<div class="table-responsive"><table class="table bg-white"><thead><tr><th>Appointment</th><th>Patient</th><th>Doctor</th><th>Amount</th><th>Payment</th><th>Action</th></tr></thead><tbody>
+{% for a in appointments %}<tr><td>#{{ a.id }}</td><td>{{ a.patient_name }}</td><td>{{ a.doctor.name }}</td><td>৳{{ "%.0f"|format(a.bill.amount if a.bill else a.doctor.fee) }}</td><td>{{ a.bill.payment_status if a.bill else "Not invoiced" }}</td><td>{% if not a.bill %}<form method="post" action="/billing/{{ a.id }}"><button class="btn btn-sm btn-outline-primary">Generate invoice</button></form>{% else %}—{% endif %}</td></tr>{% else %}<tr><td colspan="6" class="text-center muted">No appointments to bill.</td></tr>{% endfor %}
+</tbody></table></div>{% endblock %}

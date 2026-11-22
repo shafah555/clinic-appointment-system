@@ -1,0 +1,2 @@
+{% extends "base.html" %}{% block title %}Notifications · CarePoint{% endblock %}{% block content %}
+<h1 class="h2 mb-3">Notification centre</h1><div class="list-group">{% for n in notifications %}<div class="list-group-item py-3"><div class="d-flex justify-content-between"><b>{{ n.recipient }}</b><span class="badge text-bg-light">{{ n.status }}</span></div>{{ n.message }}</div>{% else %}<div class="list-group-item muted">No notifications yet. Book or update an appointment to create one.</div>{% endfor %}</div>{% endblock %}
